@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Summer T-Shirts</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="news-ticker">
+            <div class="ticker-content">
+                <span>🔥 Summer Sale: Get 10% Off on All Custom T-Shirts!</span>
+                <span>🚚 Free Shipping on Orders Over $50!</span>
+                <span>🎨 Design Your Own T-Shirt in Just 3 Easy Steps!</span>
+                <span>🎉 Flash Sale! Get 10% Off on All Marvel Collection T-Shirts – Limited Time Only!</span>
+                <span>🚚 Free Shipping Worldwide! No Minimum Order Required.</span>
+                <span>🎨 Create Your Own T-Shirt! Customize with Your Favorite Design in 3 Easy Steps.</span>
+                <span>🔥 Trending Now: GTA 6 & Minecraft T-Shirts – Grab Yours Before They’re Gone!</span>
+                <span>⭐ Rated 5/5 by 10,000+ Happy Customers! Join the Family Today.</span>
+                <span>⏳ Hurry! Limited Stock Available on Marvel Collection T-Shirts.</span>
+                <span>😎 Too Cool for Regular T-Shirts? Customize Your Own Now!</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#store">Store</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <input type="text" class="search-bar" id="searchBar" placeholder="Search products...">
+            <button onclick="searchProducts()" class="search-btn">🔍</button>
+            <div class="cart">🛒 <span id="cart-count">0</span></div>
+            <button class="view-cart" onclick="viewCart()">View Cart</button>
+        </nav>
+    </header>
+    <div class="typewriter-container">
+        <h1 id="typewriter-text"></h1>
+    </div>
+
+    <section id="home">
+        <div class="slider">
+            <div class="slides">
+                <img src="img/plane.png" alt="T-Shirt 1">
+                <img src="img/cap.png" alt="T-Shirt 2">
+                <img src="img/got.png" alt="T-Shirt 3">
+                <img src="img/nuke.png" alt="T-Shirt 4">
+                <img src="img/gta6.png" alt="T-Shirt 5">
+            </div>
+        </div>
+    </section>
+
+    <section id="store">
+        <h1>MARVEL COLLECTION</h1>
+        <div class="products">
+            <div data-name="Costom T-Shirt 11">
+                <img src="img/iron2.png" alt="Iron Man T-Shirt" width="350">
+                <p>Iron Man T-Shirt - ₹349</p>
+                <select class="size-select">
+                    <option value="">Select Size</option>
+                    <option value="S">Small (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="L">Large (L)</option>
+                </select>
+                <button onclick="addToCart('Iron Man T-Shirt', 349, 'img/iron2.png', this)">Add to Cart</button>
+            </div>
+            <div data-name="Costom T-Shirt 12">
+                <img src="img/moonkinght.png" alt="Moon Knight T-Shirt" width="350">
+                <p>Moon Knight T-Shirt - ₹349</p>
+                <select class="size-select">
+                    <option value="">Select Size</option>
+                    <option value="S">Small (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="L">Large (L)</option>
+                </select>
+                <button onclick="addToCart('Moon Knight T-Shirt', 349, 'img/moonkinght.png', this)">Add to Cart</button>
+            </div>
+            <div data-name="Costom T-Shirt 15">
+                <img src="img/deadpool.png" alt="Deadpool T-Shirt" width="350">
+                <p>Deadpool T-Shirt - ₹349</p>
+                <select class="size-select">
+                    <option value="">Select Size</option>
+                    <option value="S">Small (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="L">Large (L)</option>
+                </select>
+                <button onclick="addToCart('Deadpool T-Shirt', 349, 'img/deadpool.png', this)">Add to Cart</button>
+            </div>
+        </div>
+
+        <h1>MEME COLLECTION</h1>
+        <div class="products">
+            <div data-name="Costom T-Shirt 5">
+                <img src="img/doraemon.png" alt="Doraemon Meme T-Shirt" width="350">
+                <p>Doraemon Meme T-Shirt - ₹349</p>
+                <select class="size-select">
+                    <option value="">Select Size</option>
+                    <option value="S">Small (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="L">Large (L)</option>
+                </select>
+                <button onclick="addToCart('Doraemon Meme T-Shirt', 349, 'img/doraemon.png', this)">Add to Cart</button>
+            </div>
+            <div data-name="Costom T-Shirt 13">
+                <img src="img/mentality.png" alt="Sigma Mentality Meme T-Shirt" width="350">
+                <p>Sigma Mentality Meme T-Shirt - ₹349</p>
+                <select class="size-select">
+                    <option value="">Select Size</option>
+                    <option value="S">Small (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="L">Large (L)</option>
+                </select>
+                <button onclick="addToCart('Sigma Mentality Meme T-Shirt', 349, 'img/mentality.png', this)">Add to
+                    Cart</button>
+            </div>
+            <div data-name="Costom T-Shirt 1">
+                <img src="img/plane.png" alt="T-Shirt 1" width="350">
+                <p>Custom T-Shirt 1 - ₹349</p>
+                <select class="size-select">
+                    <option value="">Select Size</option>
+                    <option value="S">Small (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="L">Large (L)</option>
+                </select>
+                <button onclick="addToCart('Custom T-Shirt 1', 349, 'img/plane.png', this)">Add to Cart</button>
+
+            </div>
+        </div>
+
+        <h1>SONG ALBUM COLLECTION</h1>
+        <div class="products">
+            <div data-name="Costom T-Shirt 14">
+                <img src="img/weeknd.png" alt="The Weeknd Album T-Shirt" width="350">
+                <p>The Weeknd Album T-Shirt - ₹349</p>
+                <select class="size-select">
+                    <option value="">Select Size</option>
+                    <option value="S">Small (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="L">Large (L)</option>
+                </select>
+                <button onclick="addToCart('The Weeknd Album T-Shirt', 349, 'img/weeknd.png', this)">Add to
+                    Cart</button>
+            </div>
+            <div data-name="Costom T-Shirt 16">
+                <img src="img/juju.png" alt="JuJu Album T-Shirt" width="350">
+                <p>JuJu Album T-Shirt - ₹349</p>
+                <select class="size-select">
+                    <option value="">Select Size</option>
+                    <option value="S">Small (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="L">Large (L)</option>
+                </select>
+                <button onclick="addToCart('JuJu Album T-Shirt', 349, 'img/juju.png', this)">Add to Cart</button>
+            </div>
+        </div>
+        <h1>GAMING COLLECTION</h1>
+        <div class="products">
+            <div data-name="Call of Duty">
+                <img src="img/cod.png" alt="Call of Duty T-Shirt" width="350">
+                <p>Call of Duty T-Shirt - ₹349</p>
+                <button onclick="addToCart('Call of Duty T-Shirt', 349, 'img/cod.png', this)">Add to Cart</button>
+            </div>
+            <div data-name="Minecraft">
+                <img src="img/minecraft.png" alt="Minecraft T-Shirt" width="350">
+                <p>Minecraft T-Shirt - ₹349</p>
+                <button onclick="addToCart('Minecraft T-Shirt', 349, 'img/minecraft.png', this)">Add to Cart</button>
+            </div>
+            <div data-name="Valorant">
+                <img src="img/valo.png" alt="Valorant T-Shirt" width="350">
+                <p>Valorant T-Shirt - ₹349</p>
+                <button onclick="addToCart('Valorant T-Shirt', 349, 'img/valo.png', this)">Add to Cart</button>
+            </div>
+            <div data-name="PlayStation">
+                <img src="img/psshirt.png" alt="PlayStation T-Shirt" width="350">
+                <p>PlayStation T-Shirt - ₹349</p>
+                <button onclick="addToCart('PlayStation T-Shirt', 349, 'img/psshirt.png', this)">Add to Cart</button>
+            </div>
+            <div data-name="GTA 6">
+                <img src="img/gta6.png" alt="GTA 6 T-Shirt" width="350">
+                <p>GTA 6 Meme T-Shirt - ₹349</p>
+                <button onclick="addToCart('GTA 6 Meme T-Shirt', 349, 'img/gta6.png', this)">Add to Cart</button>
+            </div>
+    </section>
+
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We provide customizable summer T-shirts for both men and women, crafted for comfort and style.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: ssaranjeet227@gmail.com</p>
+        <p>Phone: +91 8376012607</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Custom Summer Tees. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+
+        function searchProducts() {
+            const input = document.getElementById("searchBar").value.trim().toLowerCase();
+            const products = document.querySelectorAll(".products > div"); // Target child divs of .products
+
+            console.log("Search input:", input); // Debugging log
+            console.log("Number of products found:", products.length); // Debugging log
+
+            products.forEach(product => {
+                const name = product.getAttribute("data-name").toLowerCase();
+                if (name.includes(input)) {
+                    product.style.display = "flex";  // Ensuring flex display
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Hello, Welcome to My Website"; // Text to display
+            const typewriterText = document.getElementById("typewriter-text");
+            let index = 0;
+
+            function typeWriter() {
+                if (index < text.length) {
+                    typewriterText.textContent += text.charAt(index); // Add one character at a time
+                    index++;
+                    setTimeout(typeWriter, 100); // Adjust typing speed (100ms per character)
+                } else {
+                    // Stop the cursor blinking after typing is complete
+                    typewriterText.style.borderRight = "none";
+                }
+            }
+
+            typeWriter(); // Start the typewriter effect
+        });
+
+
+        // Function to check if user is signed in
+        window.onload = function () {
+            const user = JSON.parse(localStorage.getItem("user"));
+            if (user) {
+                document.getElementById("user-info").innerHTML =
+                    `<h2>Hello, ${user.name}</h2>
+             <img src="${user.picture}" width="100px">
+             <p>Email: ${user.email}</p>`;
+            } else {
+                // Redirect back to login if user is not signed in
+                window.location.href = "index.html";
+            }
+        }
+
+        // Function to logout
+        function logout() {
+            localStorage.removeItem("user");  // Remove stored user info
+            window.location.href = "index.html";  // Redirect to login page
+        }
+
+
+
+
+
+
+
+
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector(".slides");
+            const totalSlides = document.querySelectorAll(".slides img").length;
+
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            slides.style.transform = `translateX(${-currentSlide * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        setInterval(nextSlide, 1500); // Auto-slide every 3 seconds
+        showSlide(currentSlide); // Initialize the first slide
+
+
+
+
+
+
+
+
+        function clearCartOnRefresh() {
+            localStorage.removeItem("cart"); // Remove the cart data from localStorage
+            cart = []; // Reset the cart array
+            updateCartCount(); // Update the cart count to 0
+        }
+
+
+
+        // Ensure cart loads correctly from localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Function to add a product to the cart
+        function addToCart(productName, price, image, button) {
+            const productDiv = button.parentElement;  // Get the parent div of the clicked button
+            const sizeSelect = productDiv.querySelector(".size-select"); // Get the size dropdown
+            const selectedSize = sizeSelect ? sizeSelect.value : "Default";
+
+            if (!selectedSize || selectedSize === "Select Size") {
+                alert("Please select a size before adding to cart.");
+                return;
+            }
+
+            // Check if the product already exists in the cart
+            const existingProduct = cart.find(item => item.name === productName && item.size === selectedSize);
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push({ name: productName, price: price, image: image, size: selectedSize, quantity: 1 });
+            }
+
+            // Save and update UI
+            saveCartToLocalStorage();
+            updateCartCount();
+
+            console.log("Cart Updated:", cart); // Debugging log
+        }
+
+        // Function to update the cart count
+        function updateCartCount() {
+            const cartCountElement = document.getElementById("cart-count");
+            if (cartCountElement) {
+                const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+                cartCountElement.innerText = cartCount;
+            } else {
+                console.error("Cart count element not found!");
+            }
+        }
+
+        // Function to save cart to localStorage
+        function saveCartToLocalStorage() {
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        // Function to load cart count from localStorage
+        function loadCartFromLocalStorage() {
+            const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart = savedCart;
+            updateCartCount();
+        }
+
+        // Function to redirect to cart page
+        function viewCart() {
+            window.location.href = "cart.html";
+        }
+
+        // Load cart count when the page loads
+        document.addEventListener("DOMContentLoaded", () => {
+            clearCartOnRefresh(); // Clear the cart on page load
+            loadCartFromLocalStorage(); // Load the cart (if needed)
+        });
+
+    </script>
+</body>
+
+</html>

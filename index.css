@@ -1,0 +1,297 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.cart {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    left: 60px;
+}
+
+.view-cart {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    right: 40px;
+    border-radius: 5px;
+}
+
+.view-cart:hover {
+    background-color: rgb(14, 87, 39);
+    color: white;
+    position: relative;
+    bottom: 2px;
+    transition: ease-in-out 0.2s;
+}
+
+.slider {
+    width: 40%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    left: 300px;
+    margin-top: 60px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.products div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.products div button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.product-item.added-to-cart {
+    background-color: #e0f7e0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: bounce 0.5s ease;
+}
+
+.size-select {
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.size-select:focus {
+    outline: none;
+    border-color: #28a745;
+}
+
+.search-bar {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-btn {
+    padding: 4px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    right: 120px;
+}
+
+.search-btn:hover {
+    background-color: rgb(93, 109, 99);
+}
+
+.news-ticker {
+    background-color: #222;
+    /* Dark background for better contrast */
+    color: #fff;
+    /* White text for visibility */
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it stays on top */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ticker-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker 20s linear infinite;
+}
+
+.ticker-content span {
+    margin-right: 50px;
+    /* Space between messages */
+    display: inline-block;
+}
+
+/* Animation for smooth scrolling */
+@keyframes ticker {
+    0% {
+        transform: translateX(80%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Navbar Styles (example) */
+nav {
+
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    /* Ensure navbar stays below the ticker */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 35px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-bar {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.search-btn {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart {
+    font-size: 1.2em;
+    cursor: pointer;
+    
+}
+
+.view-cart {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.typewriter-container {
+    text-align: center;
+    /* Center the text */
+    margin-top: 20px;
+    /* Adjust as needed */
+    position: relative;
+    top: 60px;
+}
+
+#typewriter-text {
+    display: inline-block;
+    font-family: monospace;
+    /* Monospace font for typewriter effect */
+    font-size: 2.5em;
+    /* Adjust font size */
+    color: #333;
+    /* Text color */
+    overflow: hidden;
+    /* Hide overflow */
+    border-right: 0.15em solid orange;
+    /* Blinking cursor */
+    white-space: nowrap;
+    /* Keep text in one line */
+    margin: 0 auto;
+    /* Center the text */
+    letter-spacing: 0.15em;
+    /* Spacing between letters */
+    animation: blink-cursor 0.75s step-end infinite;
+}
+
+/* Blinking cursor animation */
+@keyframes blink-cursor {
+
+    from,
+    to {
+        border-right-color: transparent;
+        /* Hide cursor */
+    }
+
+    50% {
+        border-right-color: orange;
+        /* Show cursor */
+    }
+}
