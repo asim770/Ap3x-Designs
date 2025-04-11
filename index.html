@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customizable Summer T-Shirts</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="output.css">
 
 </head>
 
-<body>
-
+<body class="font-sans m-0 p-0 text-center">
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+    </h1>
     <header>
         <div class="news-ticker">
             <div class="ticker-content">
@@ -566,20 +568,6 @@
             typeWriter(); // Start the typewriter effect
         });
 
-
-        // Function to check if user is signed in
-        window.onload = function () {
-            const user = JSON.parse(localStorage.getItem("user"));
-            if (user) {
-                document.getElementById("user-info").innerHTML =
-                    `<h2>Hello, ${user.name}</h2>
-             <img src="${user.picture}" width="100px">
-             <p>Email: ${user.email}</p>`;
-            } else {
-                // Redirect back to login if user is not signed in
-                window.location.href = "index.html";
-            }
-        }
 
         // Function to logout
         function logout() {
